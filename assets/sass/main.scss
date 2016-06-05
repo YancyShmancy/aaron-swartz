@@ -1,4 +1,5 @@
 @import "partials/variables";
+@import "partials/nav-icon";
 
 * {
     box-sizing: border-box;
@@ -9,49 +10,103 @@ body, html {
     height: 4000px;
 }
 
-#home-aaron {
-    height: 100%;
-    width: auto;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-}
-
-.header-container {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 100%;
-    height: auto;
-    text-align: center;
-    
-    h1 {
-        float: left;
-        width: 100%;
-        font-size: 4em;
-        padding: 0;
-        margin: 0;
-        opacity: 0;
-    }
-    
-    h2 {
-        float: left;
-        width: 100%;
-        font-size: 2em;
-        padding: 0;
-        margin: 0;
-        opacity: 0;
-    }
-}
-
-#home {
-    background: url('../img/Home-Aaron-Background.png');
-    background-size: auto 100%;
-    background-position: center;
-    background-repeat: no-repeat;
+#nav {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 2;
+    background-color: $cyan;
+    transform: rotateZ(150deg) translateY(5%) translateX(-9%);
+    transform-origin: 90% 10%;
+    transition: 0.25s transform ease-out;
+    
+    &.active {
+        transform: rotateZ(0) translateY(0) translateX(0);
+    }
+}
+
+#home-aaron {
+    height: auto;
+    width: 1500px;
+    position: absolute;
+    bottom: -200px;
+    left: 50%;
+    margin-left: -750px;
+}
+
+#home-aaron-bg {
+    height: auto;
+    width: 1500px;
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    margin-left: -750px; 
+}
+
+
+
+
+#home {
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    
+    .title-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: auto;
+        text-align: center;
+
+        h1 {
+            float: left;
+            width: 100%;
+            font-size: 4em;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+        }
+
+        h2 {
+            float: left;
+            width: 100%;
+            font-size: 2em;
+            padding: 0;
+            margin: 0;
+            opacity: 0;
+        }
+    }
+    
+    .intro-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        height: auto;
+        text-align: justify;
+        z-index: 1;
+        padding: 20px 200px;
+        
+        p {
+            font-size: 3em;
+            font-family: helvetica;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            
+            &.intro {
+                opacity: 0;
+            }
+            
+            &.intro-finish {
+                opacity: 0;
+            }
+        }
+        
+        
+    }
 }
 
 div {
@@ -60,6 +115,7 @@ div {
     height: 100vh;
     width: 100vw;
     color: white;
+    overflow: hidden;
 }
 
 #accomp {
@@ -76,6 +132,6 @@ div {
 #accomp-aaron {
     position: absolute;
     left: -200px;
-    bottom: 0;
+    bottom: -50px;
     height: 100%;
 }
