@@ -30,12 +30,13 @@ tl.to({}, 30, {})
     .to('#accomp', 3, {top: '-100%'}, '-=14')
     .to('#charges', 3, {top: 0}, '-=14');
 
+
 tl.stop();
 
 $(document).mousemove(function(e){
     $('#home-aaron').parallax(50, e);
     $('#accomp-aaron').parallax(50, e);
-}); 
+});
 
 $(window).on("scroll", function() {
     pageHeight = $('body').height();
@@ -52,5 +53,4 @@ $('.accomp-list li').on('click', function() {
     
     $(this).toggleClass('active');
 })
-
 

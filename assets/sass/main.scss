@@ -30,7 +30,7 @@ ul {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 5;
+    z-index: 4;
     background-color: $cyan;
     transform: rotateZ(150deg) translateY(5%) translateX(-9%);
     transform-origin: 90% 10%;
@@ -59,9 +59,6 @@ ul {
     left: 50%;
     margin-left: -750px; 
 }
-
-
-
 
 #home {
     top: 0;
