@@ -11,24 +11,32 @@
 </head>
 <body>
    
-    <div class="nav-icon">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-    </div>
-    
     <div id="nav">
-
+        <div class="nav-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        
+        <ul class="nav-list">
+            <li id="nav-home">Home</li>
+            <li id="nav-youth">Youth</li>
+            <li id="nav-accomp">Accomplishments</li>
+            <li id="nav-sopa">Sopa / Activism</li>
+            <li id="nav-closing">Aftermath &amp; Achievements</li>
+        </ul>
+        
+        <span class="copyright">&copy; 2016 Aaron Swartz Story</span>
     </div>
     
     <section id="home">
         <div class="intro-container tk-league-gothic">
             <h1 class="intro">ONCE I REALIZED THAT THERE WERE REAL, SERIOUS PROBLEMS, FUNDAMENTAL PROBLEMS 
-THAT I COULD DO SOMETHING TO ADDRESS,</p>
-            <h1 class="intro-finish">I didn't see a way to forget that.</p>
+THAT I COULD DO SOMETHING TO ADDRESS,</h1>
+            <h1 class="intro-finish">I didn't see a way to forget that.</h1>
         </div>
         <img src="./assets/img/code-background.png" alt="" id="code-bg">
         <img src="./assets/img/home-gradient.png" alt="" id="home-gradient">
@@ -41,11 +49,44 @@ THAT I COULD DO SOMETHING TO ADDRESS,</p>
     </section>
     
     <section id="young">
-        <div class="content">
-            
-        </div>
         <img src="./assets/img/library-overlay.png" alt="" id="lib-overlay">
         <img src="./assets/img/rehm-library.png" alt="" id="lib-bg">
+        
+        <div class="content">
+<!--            <img src="./assets/img/young-text.png" alt="">-->
+            <h1>Learning at a young age</h1>
+            <p class="league">Precocious from the start, Swartz taught himself to read when he was only three years old, and when he was 12 Aaron created an Info Network, user-generated encyclopedia, which Swartz later likened to an early version of Wikipedia.</p>
+        </div>
+        
+        <ul class="young-list circles">
+            <li modal="info-modal">THE INFO (website)</li>
+            <li modal="rssc-modal">RSS CODING</li>
+            <li modal="cc-modal">CREATIVE COMMONS</li>
+        </ul>
+        <img src="./assets/img/young-aaron.png" alt="" id="young-aaron">
+        
+        <div class="modal" id="info-modal">
+            <h2>The Info</h2>
+            <h3>Aaron's First Website</h3>
+            <p>A site that people anywhere could fill in the information. Aaron saw that people out there have the expertises, and this allows then to have a stage for their information</p>
+            <span class="next-modal">></span>
+        </div>
+        
+        <div class="modal" id="rssc-modal">
+            <span class="prev-modal"><</span>
+            <h2>RSS Coding</h2>
+            <h3>Rich Site Summary</h3>
+            <p>RSS solves the problem for people who regularly use the web by allowing you to easily use the web to stay informed by retrieving the laste concent from the sites you are interested in.</p>
+            <span class="next-modal">></span>
+        </div>
+        
+        <div class="modal" id="cc-modal">
+            <span class="prev-modal"><</span>
+            <h2>Creative Commons</h2>
+            <h3>'Some rights reserved'</h3>
+            <p>Rather than copy right, which means all rights reserved, creative commons gives people a simple way to markt htier creativity with the freedom it intended to carry.</p>
+            
+        </div>
     </section>
     
     <section id="accomp">
@@ -131,7 +172,7 @@ THAT I COULD DO SOMETHING TO ADDRESS,</p>
             <p class="league">Aaron was arrested January 6, 2011, after downloading a large number of academic journal articles through MIT's computer network. On September 12, 2012, federal prosecutors filed a superseding indictment adding nine more felony charges. <span>Bringing his total to 13.</span></p>
             
             
-            <ul class="charge-list">
+            <ul class="charge-list circles">
                 <li id="wire" modal="wf-modal">Wire Fraud</li>
                 <li id="computer" modal="cf-modal">Computer Fraud</li>
                 <li id="unauth" modal="unauth-modal">Unauthorized Access</li>
@@ -193,10 +234,60 @@ THAT I COULD DO SOMETHING TO ADDRESS,</p>
         <img src="./assets/img/example-bg.png" alt="" id="example-bg">
         <img src="./assets/img/example-bg-lighter.png" alt="" id="example-bg" class="lighter">
         <img src="./assets/img/example-aaron.png" alt="" id="example-aaron">
+        <img src="./assets/img/example-text.png" alt="" id="example-text">
+        
+        
+        <ul class="example-list">
+            <li id="spying" modal="spy-modal">Spying Issue</li>
+            <li id="cfac" modal="cfac-modal">Computer fraud &amp; abuse act</li>
+            <li id="pros" modal="pros-modal">Prosecution statement</li>
+            <li id="obama" modal="obama-modal">Obama administration</li>
+            <li id="super" modal="super-modal">Superseding endictment</li>
+            <li id="legal" modal="legal-modal">Legal defense costs</li>
+            <li id="secrecy" modal="secrecy-modal">Secrecy is power</li>
+        </ul>
+    </section>
+    
+    <section id="sopa">
+        <img src="./assets/img/sopa-bg.png" alt="" id="sopa-bg">
+        <img src="./assets/img/sopa-text.png" alt="" id="sopa-text">
+        <img src="./assets/img/sopa-aaron.png" alt="" id="sopa-aaron">
         
         <div class="content">
+            <p class="league">Tens of thousands of websites transferred their domain to protest SOPA. In one day the internet was overtaken to spread awareness.</p>
             
+            <ul class="ba-list circles">
+                <li modal="before-modal">Before</li>
+                <li modal="after-modal">After</li>
+            </ul>
         </div>
+        
+        <div class="modal" id="before-modal">
+            <h2>Before</h2>
+            <h3>Congress Voters</h3>
+            
+            <p><span>65</span> supporters</p>
+            <p><span>101</span> opponents</p>
+        </div>
+        
+        <div class="modal" id="after-modal">
+            <h2>After</h2>
+            <h3>Congress Voters</h3>
+            
+            <p><span>65</span> supporters</p>
+            <p><span>101</span> opponents</p>
+        </div>
+    </section>
+    
+    <section id="closing">
+        <img src="./assets/img/closing-bg.png" alt="" id="closing-bg">
+        <img src="./assets/img/closing-text.png" alt="" id="closing-text">
+        
+        <ul class="closing-list circles">
+            <li>After Aaron's Death</li>
+            <li>His Legacy</li>
+            <li>Join the Cause</li>
+        </ul>
     </section>
     
     <script src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>
