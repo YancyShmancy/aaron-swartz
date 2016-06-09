@@ -12,9 +12,9 @@ $.fn.parallax = function ( resistance, mouse ) {
 var tl = new TimelineMax();
 
 tl.to({}, 60, {})
-    .to('.intro-finish', 1, {opacity: 1}, '-=57')
-    .to('.intro', 1, {opacity: 0}, '-=57')
-    .to('.intro-finish', 1, {opacity: 0}, '-=55')
+    .to('.intro-finish', 1, {opacity: 1}, '-=59')
+    .to('.intro', 1, {opacity: 0}, '-=58')
+    .to('.intro-finish', 1, {opacity: 0}, '-=56')
     .to('#home-aaron', 1, {opacity: 0.8}, '-=55')
     .to('#home-aaron-bg', 1, {opacity: 0.5}, '-=55')
     .to('.title-container>h1', 1, {opacity: 1}, '-=54' )
