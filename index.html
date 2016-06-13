@@ -22,11 +22,11 @@
         </div>
         
         <ul class="nav-list">
-            <li id="nav-home">Home</li>
-            <li id="nav-youth">Youth</li>
-            <li id="nav-accomp">Accomplishments</li>
-            <li id="nav-sopa">Sopa / Activism</li>
-            <li id="nav-closing">Aftermath &amp; Achievements</li>
+            <li><a href="#home" onclick="tl.seek(0)">Home</a></li>
+            <li><a href="#youth">Youth</a></li>
+            <li><a href="#accomp">Accomplishments</a></li>
+            <li><a href="#sopa">Sopa / Activism</a></li>
+            <li><a href="#closing">Aftermath &amp; Achievements</a></li>
         </ul>
         
         <span class="copyright">&copy; 2016 Aaron Swartz Story</span>
@@ -282,12 +282,46 @@
     <section id="closing">
         <img src="./assets/img/closing-bg.png" alt="" id="closing-bg">
         <img src="./assets/img/closing-text.png" alt="" id="closing-text">
+        <img src="./assets/img/life-after.png" alt="" id="closing-text-2">
         
-        <ul class="closing-list circles">
-            <li>After Aaron's Death</li>
-            <li>His Legacy</li>
-            <li>Join the Cause</li>
+        <ul class="closing-list">
+            <li modal="after-aaron">After Aaron</li>
+            <li modal="legacy">Further His Legacy</li>
+            <li modal="join">Join the Cause</li>
         </ul>
+        
+        <div id="legacy" class="modal">
+            <h2>Further His Legacy</h2>
+            <div class="text-container">
+                <h3>Aaron's Law Act of 2015</h3>
+                <p>Amends provisions of the Computer Fraud and Abuse Act (CFAA) prohibiting computer fraud to replace the phrase "exceeds authorized access" with "access without authorization," which is defined as obtaining information on a protected computer that the accesser lacks authorization to obtain by knowingly circumventing one or more technological or physical measures that are designed to exclude or prevent unauthorized individuals from obtaining that information.</p>
+            </div>
+            <img src="./assets/img/bill.png" alt="">
+        </div>
+        
+        <div id="join" class="modal">
+            <img src="./assets/img/demand-progress.png" alt="" class="bg">
+            <h2>Join the Cause</h2>
+            <div class="text-container">
+                <h3>Demand Progress</h3>
+                <p>Is an internet activist-related entity, with sponsorship from the Citizen Engagement Lab Education Fund specializing in online intensive and other grassroots activism to support Internet freedom, civil liberties, transparency, and human rights, and in opposition to censorship and corruption.</p>
+                <span>"We have around 1.5 billion members now."</span>
+            </div>
+            <img src="./assets/img/cause-text.png" alt="">
+        </div>
+        
+        <div id="after-aaron" class="modal">
+            <h2>After Aaron</h2>
+            <div class="img-container">
+                <img src="./assets/img/andraka.png" alt="">
+            </div>
+            <div class="text-container">
+                <h3>Jack Andraka</h3>
+                <p>He was at the time a 14 year old boy that is a perfect example of what Swartz was fighting for. Because of Swartz, Jack had access to JSTOR, and with such information he was able to figure out a way to do early testing for pancriatic cancer ( a diseas that typically is found too late). Jack sent all of his findinds and his research to every oncologiest in the department at John Hopkins. He was ignored by every proffesor but one. Working endlessly, the two of them were able to figure it out and are now are shipping it.  After his findings were made public, he was on the news and he stated</p>
+
+                <span><i>"</i>This is why what Aaron Swartz did was so important [...] if i did’nt have access to JSTOR i might have not been able to solve one of cancers threats for men!" </span>
+            </div>
+        </div>
     </section>
     
     <script src="https://code.jquery.com/jquery-2.2.3.js"   integrity="sha256-laXWtGydpwqJ8JA+X9x2miwmaiKhn8tVmOVEigRNtP4="   crossorigin="anonymous"></script>

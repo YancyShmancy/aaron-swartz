@@ -74,7 +74,6 @@ ul {
         margin-left: -350px;
     
         li {
-            
             font-family: 'League';
             font-size: 3em;
             text-transform: uppercase;
@@ -82,11 +81,17 @@ ul {
             border-bottom: 1px solid white;
             opacity: 0;
             transition: 0.9s opacity ease-out;
-            cursor: pointer;
             
-            &:hover {
-                color: $dark-cyan;
+            a {
+                text-decoration: none;
+                color: white;
+                
+                &:hover {
+                    color: $dark-cyan;
+                }
             }
+            
+            
             
             &:nth-of-type(1) {
                 letter-spacing: 15px;
@@ -215,8 +220,8 @@ ul {
 #accomp {
     background: -webkit-linear-gradient(left, rgba(255,252,252,0) 31%,rgba(255,252,252,0) 35%,rgba(0,174,239,0.2) 40%,rgba(0,15,35,1) 71%,rgba(0,15,35,1) 100%),
         url('../img/Accomp-Aaron-Background.png');
-    background-size: auto;
-    background-position: right, -400px 0%;
+    background-size: cover;
+    background-position: right, 0% 0%;
     background-repeat: no-repeat;
     position: fixed;
     top: 100%;
@@ -224,9 +229,12 @@ ul {
     
     .accomp-list {
         position: absolute;
-        left: 60%;
-        height: 100%;
+        left: 50%;
+        top: 50%;
+        height: auto;
         width: 100%;
+        transform: translateY(-50%);
+        margin-left: 200px;
         
         li {
             display: block;
@@ -300,9 +308,15 @@ ul {
 
 #accomp-aaron {
     position: absolute;
-    left: -200px;
-    bottom: -50px;
-    height: 800px;
+    left: 50%;
+    margin-left: -800px;
+    bottom: 0;
+    height: 100%;
+    
+    @media screen and (min-width: 1300px) {
+        left: 0;
+        margin-left: -200px;
+    }
 }
 
 #charges {
@@ -548,7 +562,8 @@ ul {
     position: absolute;
     top: 0;
     right: 0;
-    width: 700px;
+    height: 100%;
+    
 }
 
 #lib-overlay {
@@ -577,8 +592,9 @@ ul {
     .example-list {
         position: absolute;
         left: 60%;
-        top: 0;
-        height: 100%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
         width: 100%;
         
         li {
@@ -596,8 +612,6 @@ ul {
             color: $dark-blue;
         }
     }
-    
-
 }
 
 #example-text {
@@ -669,10 +683,6 @@ ul {
             color: $light-blue;
             cursor: pointer;
             text-transform: uppercase;
-            
-            &:nth-of-type(2) {
-//                transform: translateY(-40px);
-            }
         }
     }
     
@@ -757,39 +767,161 @@ ul {
     left: 0;
     
     .closing-list {
-        width: 50%;
+        width: 100%;
+        padding: 0;
         position: absolute;
-        height: 300px;
-        left: 50%;
-        top: 50%;
-        margin-top: 120px;
-        margin-left: -175px;
-        text-align: center;
+        bottom: 0;
+        height: 15%;
+        margin: 0;
+        left: 0;
+        z-index: 998;
         
         li {
-            width: 160px;
-            height: 160px;
-            border-radius: 50%;
+            float: left;
+            width: 33%;
+            height: 80px;
+            overflow: hidden;
             text-align: center;
-            background-color: $dark-cyan;
-            padding: 40px 10px 50px 10px;
-            font-size: 2.2em;
-            margin-right: 20px;
-            display: inline-block;
-            color: $light-blue;
-            cursor: pointer;
+            font-size: 2em;
+            font-family: 'Open Sans';
             text-transform: uppercase;
+            transition: 0.25s opacity ease-out;
+            cursor: pointer;
+            opacity: 0.8;
             
-            &:nth-of-type(1) {
-                padding-top: 15px;
-                transform: translateY(20px);
-            }
-            
-            &:nth-of-type(2) {
-                transform: translateY(-30px);
-                padding-top: 50px;
+            &.active {
+                opacity: 0 !important;
             }
         }
+    }
+    
+    .modal {
+        position: absolute;
+        top: 0;
+        left: 10%;
+        width: 80%;
+        height: 0;
+        opacity: 0;
+        z-index: 5;
+        padding: 100px 0;
+        transition: 0.5s opacity ease-out;
+        overflow: hidden;
+        
+        h2 {
+            float: left;
+            width: 100%;
+            font-family: 'Open Sans';
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+        
+        &.active {
+            opacity: 1;
+            height: 85%;
+        }
+        
+        h3 {
+            font-size: 3em;
+            margin: 0 0 5px 0;
+        }
+        
+        p {
+            font-size: 1em;
+            
+            @media screen and (min-width: 1300px) {
+                
+                font-size: 1.5em;
+            }
+        }
+        
+        span {
+            width: 100%;
+            float: left;
+            font-size: 1em;
+            font-family: 'Open Sans';
+            padding: 0 30px;
+        }
+    }
+}
+
+#after-aaron {
+    
+    img {
+        float: left;
+        width: 30%;
+        height: auto;
+    }
+    
+    .text-container {
+        float: left;
+        width: 70%;
+        padding-left: 30px;
+        padding-right: 40px;
+    }
+}
+
+#legacy {
+    
+    img {
+        float: left;
+        width: 50%;
+        height: auto;
+        padding-left: 50px;
+        padding-top: 50px;
+    }
+    
+    .text-container {
+        float: left;
+        width: 50%;
+        padding-right: 50px;
+    }
+    
+    h2 {
+        width: 50%;
+        margin-left: 35%;
+    }
+    
+    p {
+        font-size: 1.2em;
+        line-height: 1.8em;
+    }
+}
+
+#join {
+    
+    h2 {
+        text-align: right;
+    }
+    
+    img {
+        float: left;
+        width: 50%;
+        padding-left: 30px;
+    }
+    
+    img.bg {
+        position: absolute;
+        height: 80%;
+        width: auto;
+        top: 50%;
+        left: 50%;
+        opacity: 0.8;
+        z-index: -1;
+        padding-left: 0;
+        transform: translateX(-50%) translateY(-50%);
+        -webkit-filter: brightness(0);
+    }
+    
+    .text-container {
+        float: left;
+        width: 50%;
+    }
+    
+    p {
+        font-size: 1.5em;
+        line-height: 2em;
+        padding-right: 30px;
     }
 }
 
@@ -807,4 +939,15 @@ ul {
     margin-left: -550px;
     transform: translateY(-10%);
     opacity: 0;
+}
+
+#closing-text-2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -300px;
+    margin-left: -350px;
+    transform: translateY(-10%);
+    opacity: 0;
+    transform: 0.25s all ease-out;
 }
